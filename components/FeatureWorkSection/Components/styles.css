@@ -1,0 +1,41 @@
+.swiper {
+  width: 100%;
+  height: auto; /* Ensure Swiper container adjusts to content */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+/* Room above/below and at the sides so the tilted edges of the curved cards aren't clipped */
+.curve-swiper {
+  padding: 32px 60px;
+}
+
+.swiper-slide {
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: stretch; /* Equal-height cards, all aligned to the top */
+  height: auto;
+  background: transparent !important; /* Remove background for transparency */
+}
+
+.swiper-slide > div {
+  width: 100%;
+}
+
+.curve-media {
+  transform-origin: center center;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  will-change: transform;
+}
+
+.swiper-wrapper {
+  padding: 0; /* Remove padding in the wrapper */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 36% !important; /* Center navigation arrows vertically */
+  /* transform: translateY(-50%); */
+  color: black !important;
+}
