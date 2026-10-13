@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html {
+  overflow: auto;
+  overflow-x: hidden !important;
+}
+
+body {
+  touch-action: pan-x pan-y;
+}
+
+/* Handle */
+
+body::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background-color: rgb(14, 14, 21, 0.4000000059604645)
+}
+
+
+/* width */
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px
+}
+
+
+h1,
+h2,
+h3 {
+  color: #3C3C3C
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px
+}
+
+.noScroller::-webkit-scrollbar {
+  width: 0px;
+  height: 0px
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 8px;
+  background-color: rgba(179, 179, 179, 0.4);
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 15s linear infinite;
+  will-change: transform;
+  width: max-content;
+  /* Ensures no gaps between elements */
+}
+
+.animate-marquee2 {
+  display: flex;
+  animation: marquee 200s linear infinite;
+  will-change: transform;
+  width: max-content;
+  /* Ensures no gaps between elements */
+}
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.bounce-effect {
+  display: flex;
+  animation: bounce 2s linear infinite;
+  will-change: transform;
+}
+
+
+@keyframes cicular {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cicular-effect {
+  display: flex;
+  animation: cicular 10s linear 1;
+  will-change: transform;
+}
+
+
+@keyframes faded {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.faded-effect {
+  display: flex;
+  animation: faded 1s linear infinite;
+  will-change: transform;
+}
+
+@keyframes idea-eclipse-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.idea-eclipse-path {
+  fill: none;
+  stroke: #3a3a3a;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  animation: idea-eclipse-draw 2.4s ease-out forwards;
+}
+
+.idea-eclipse-path-1 {
+  animation-delay: var(--eclipse-delay, 0.6s);
+}
+
+.idea-eclipse-path-2 {
+  animation-delay: calc(var(--eclipse-delay, 0.6s) + 2.4s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faded-effect,
+  .bounce-effect,
+  .cicular-effect {
+    animation: none;
+  }
+
+  .idea-eclipse-path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
