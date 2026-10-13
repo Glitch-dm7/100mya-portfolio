@@ -27,11 +27,11 @@ export const achievementsData = [
   {
     icon: '/images/decoresImg/flag.png',
     image: '/images/achievementImg/6.jpg',
-    caption: 'First Prize won by our team "HueX"',
+    caption: 'Master’s in UX Design, officially completed ."',
   },
   {
     icon: '/images/decoresImg/paper_plane.png',
     image: '/images/achievementImg/7.jpg',
-    caption: 'First Prize won by our team "HueX"',
+    caption: 'Officially part of the Chitkara Grad, Batch 2026"',
   },
 ];
