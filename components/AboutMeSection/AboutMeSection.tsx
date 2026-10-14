@@ -74,7 +74,7 @@ const AboutMeSection = () => {
               scale={1.1}
               threshold={0.2}
             >
-              <p className="mt-8 font-annie text-[28px] leading-tight tracking-[0.03em] text-[#202020] md:mt-10 md:text-[44px] max-md:text-center">
+              <p className="mt-8 font-annie text-[28px] leading-tight tracking-[0.03em] text-[#202020] md:mt-10 md:text-[44px]">
                 Let&apos;s make great ideas happen!
               </p>
 

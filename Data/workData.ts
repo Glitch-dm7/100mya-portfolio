@@ -19,16 +19,16 @@ export const workData = [
     image: '/images/workImgs/LoanRecovery.jpeg', 
     link: 'https://www.behance.net/gallery/240893303/Loan-Discovery-Re-engagement-for-a-Fintech-App'
   },
-  // { 
-  //   title: 'Modern Fintech App - Banking & KYC UI Concept', 
-  //   image: '/images/workImgs/Stock.jpeg', 
-  //   link: 'https://www.behance.net/gallery/238812477/Modern-Fintech-App-Banking-KYC-UI-Concept'
-  // },
-  // { 
-  //   title: 'A Minimalist World Clock UI', 
-  //   image: '/images/workImgs/Time.jpeg', 
-  //   link: 'https://www.behance.net/gallery/238505825/A-Minimalist-World-Clock-UI' 
-  // },
+  { 
+    title: 'Modern Fintech App - Banking & KYC UI Concept', 
+    image: '/images/workImgs/Stock.jpeg', 
+    link: 'https://www.behance.net/gallery/238812477/Modern-Fintech-App-Banking-KYC-UI-Concept'
+  },
+  { 
+    title: 'A Minimalist World Clock UI', 
+    image: '/images/workImgs/Time.jpeg', 
+    link: 'https://www.behance.net/gallery/238505825/A-Minimalist-World-Clock-UI' 
+  },
   { 
     title: 'BondsPe Admin Panel | Fintech Dashboard UI/UX Design', 
     image: '/images/workImgs/CaseStudy.jpg', 
