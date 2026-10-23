@@ -1,7 +1,7 @@
 import SkillsAutoScroll from "./components/SkillsAutoScroll";
 import TypeWriter from "../TypeWriter/TypeWriter";
-import FadeContent from "../Animations/FadeContent";
-import IdeaEclipse from "./components/IdeaEclipse";
+import ScrollReveal from "../Animations/ScrollReveal";
+import HeroHeading from "./components/HeroHeading";
 import Image from "next/image";
 
 const typoData: string[] = [
@@ -12,7 +12,7 @@ const typoData: string[] = [
 
 const HeroSection = () => {
   return (
-    <div
+    <section
       id="home"
       className="relative flex min-h-[95svh] flex-col overflow-x-clip bg-background bg-[url('/images/dots-bg.png'),url('/images/bg-gradient.png')] bg-cover bg-center bg-no-repeat md:h-[105dvh]"
     >
@@ -53,40 +53,18 @@ const HeroSection = () => {
               draggable={false}
             />
 
-            <FadeContent
-              blur={true}
-              duration={1500}
-              easing="ease-out"
-              initialOpacity={0}
-            >
-              <h1 className="text-center font-nanum text-[42px] font-extrabold leading-[53px] text-[#313131] md:text-[90px] md:font-bold md:leading-[112px]">
-                Shaping{" "}
-                <span className="relative inline-block italic">
-                  ideas
-                  <IdeaEclipse />
-                </span>{" "}
-                into
-                <br className="hidden md:block" />{" "}
-                <span className="relative inline-block">
-                  intuitive experiences with
-                  <Image
-                    src="/images/decoresImg/curve_arrow.png"
-                    alt="Curve Arrow"
-                    width={160}
-                    height={80}
-                    className="pointer-events-none absolute left-[72%] top-full -mt-2 h-12 w-auto rotate-[-80deg] object-contain md:left-[78%] md:mt-2 md:h-28 md:rotate-[-8deg]"
-                    draggable={false}
-                  />
-                </span>
-              </h1>
-            </FadeContent>
+            <ScrollReveal duration={1}>
+              <HeroHeading />
+            </ScrollReveal>
           </div>
 
           {/* Subtitle block — Figma mobile: 222px centered, 41px below title */}
           <div className="relative mx-auto mt-[41px] w-fit max-w-full md:mt-[66px] md:w-auto">
+            <ScrollReveal>
             <h6 className="whitespace-nowrap text-center font-annie text-[40px] font-normal leading-[57px] text-[#7A5944] md:text-[70px] md:leading-[100px]">
               <TypeWriter data={typoData} />
             </h6>
+            </ScrollReveal>
 
             <Image
               src="/images/decoresImg/shining_star.png"
@@ -101,9 +79,11 @@ const HeroSection = () => {
       </div>
 
       <div className="w-full pb-4 md:mt-auto md:pb-6">
-        <SkillsAutoScroll />
+        <ScrollReveal baseOffset={16}>
+          <SkillsAutoScroll />
+        </ScrollReveal>
       </div>
-    </div>
+    </section>
   );
 };
 

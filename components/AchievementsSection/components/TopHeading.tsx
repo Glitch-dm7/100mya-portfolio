@@ -1,5 +1,4 @@
-import BlurText from '@/components/Animations/BlurText';
-import SplitText from '@/components/Animations/SplitText';
+import ScrollReveal from '@/components/Animations/ScrollReveal';
 import Image from 'next/image';
 import React from 'react';
 
@@ -12,12 +11,7 @@ const TopHeading: React.FC<TopHeadingProps> = ({ title, subTitle }) => {
   return (
     <div className="relative text-center mb-2">
       <h2 className="relative inline-block text-[40px] md:text-[80px] font-nanum font-[800] text-[#3C3C3C]">
-        <BlurText
-          text={title}
-          delay={150}
-          animateBy="words"
-          direction="top"
-        />
+        <ScrollReveal as="span">{title}</ScrollReveal>
         <Image
           src="/images/decoresImg/three_line.png"
           alt="Star Decor"
@@ -29,14 +23,7 @@ const TopHeading: React.FC<TopHeadingProps> = ({ title, subTitle }) => {
 
       </h2>
       <div className=' text-[20px] md:text-[40px] font-annie ' >
-        <SplitText
-          text={subTitle}
-          delay={150}
-          animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-          animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-          threshold={0.2}
-          rootMargin="-50px"
-        />
+        <ScrollReveal>{subTitle}</ScrollReveal>
       </div>
       <Image
         src="/images/decoresImg/shining_star.png"

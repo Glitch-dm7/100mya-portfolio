@@ -1,12 +1,13 @@
-import AnimatedContent from "../Animations/AnimatedContent";
+import ScrollReveal from "../Animations/ScrollReveal";
 import Button from "../Button/Button";
-import InfoBox from "./Components/InfoBoxProps";
+import AboutParagraph from "./Components/AboutParagraph";
 import Image from "next/image";
 
 const AboutMeSection = () => {
   return (
     <section id="about" className="bg-[#FFF3E8] py-12 md:py-20 lg:py-24">
       <div className="mx-auto max-w-[1512px] px-4 md:px-16 lg:px-[80px]">
+        <ScrollReveal>
         <h2 className="mb-10 flex items-center justify-center font-nanum text-[48px] font-[800] text-[#3C3C3C] md:mb-14 md:text-[80px] lg:mb-16">
           Ab
           <Image
@@ -19,65 +20,21 @@ const AboutMeSection = () => {
           />
           ut me
         </h2>
+        </ScrollReveal>
 
         <div className="flex flex-col items-center gap-12 md:flex-row md:items-start md:gap-16 lg:gap-20 xl:gap-24">
           <div className="order-2 w-full md:order-1 md:max-w-[780px] md:flex-[1.15] md:text-left">
-            <AnimatedContent
-              distance={200}
-              direction="horizontal"
-              reverse={true}
-              config={{ tension: 80, friction: 20 }}
-              initialOpacity={0}
-              animateOpacity
-              scale={1.1}
-              threshold={0.2}
-            >
-              <p className="relative mx-auto max-w-[358px] text-center font-montserrat text-[20px] font-medium leading-[28px] text-[#3C3C3C] md:mx-0 md:max-w-none md:text-left md:text-[40px] md:leading-[60px] md:tracking-[0.02em]">
-                I&apos;m{" "}
-                <span className="relative inline whitespace-nowrap font-bold">
-                  SAUMYA GAUTAM
-                  <InfoBox
-                    text="Delhi"
-                    className="left-0 top-full -translate-y-1/3 md:left-2 md:-translate-y-1/3"
-                  />
-                </span>
-                , a{" "}
-                <span className="relative inline">
-                  UX/UI
-                  <InfoBox
-                    text="2 years"
-                    className="-top-4 left-[84%] -translate-x-1/2 md:bottom-full md:left-[calc(100%+0.05em)] md:top-auto md:translate-x-0"
-                  />
-                </span>{" "}
-                designer driven by <span className="font-bold">CURIOSITY</span>{" "}
-                and <span className="font-bold">CREATIVITY</span>. I specialize
-                in crafting intuitive,{" "}
-                <span className="relative inline font-bold">
-                  USER-CENTERED
-                  <InfoBox
-                    text="Empathy"
-                    className="left-1/2 top-full -translate-x-1/2 -translate-y-1/3 md:left-[20%] md:translate-x-0 md:-translate-y-1/4"
-                  />
-                </span>{" "}
-                <span className="font-bold">DESIGNS</span> that solve real-world
-                problems.
-              </p>
-            </AnimatedContent>
+            <ScrollReveal>
+              <AboutParagraph />
+            </ScrollReveal>
 
-            <AnimatedContent
-              distance={250}
-              direction="vertical"
-              reverse={false}
-              config={{ tension: 80, friction: 20 }}
-              initialOpacity={0}
-              animateOpacity
-              scale={1.1}
-              threshold={0.2}
-            >
+            <ScrollReveal>
               <p className="mt-8 font-annie text-[28px] leading-tight tracking-[0.03em] text-[#202020] md:mt-10 md:text-[44px] max-md:text-center">
                 Let&apos;s make great ideas happen!
               </p>
+            </ScrollReveal>
 
+            <ScrollReveal>
               <div className="mt-6 flex justify-center md:mt-8 md:justify-start">
                 <Button
                   text="Let's Connect"
@@ -85,20 +42,11 @@ const AboutMeSection = () => {
                   className="rounded-md border-[#8A6C59] font-semibold text-[#8A6C59] md:!text-[20px]"
                 />
               </div>
-            </AnimatedContent>
+            </ScrollReveal>
           </div>
 
           <div className="order-1 flex w-full justify-center md:order-2 md:flex-1 md:justify-end">
-            <AnimatedContent
-              distance={250}
-              direction="vertical"
-              reverse={false}
-              config={{ tension: 80, friction: 20 }}
-              initialOpacity={0}
-              animateOpacity
-              scale={1.1}
-              threshold={0.2}
-            >
+            <ScrollReveal baseOffset={32}>
               <div className="relative w-[213px] md:w-[427px]">
                 <div
                   className="absolute inset-0 bg-[#F9F8F7] shadow-[0_3px_34px_rgba(0,0,0,0.15)] rotate-[-4deg]"
@@ -141,7 +89,7 @@ const AboutMeSection = () => {
                   draggable={false}
                 />
               </div>
-            </AnimatedContent>
+            </ScrollReveal>
           </div>
         </div>
       </div>

@@ -2,8 +2,16 @@ import {
   Annie_Use_Your_Telescope,
   Montserrat,
   Nanum_Myeongjo,
+  Roboto_Flex,
   Spicy_Rice,
 } from "next/font/google";
+
+export const robotoFlex = Roboto_Flex({
+  subsets: ["latin"],
+  axes: ["opsz"],
+  variable: "--font-roboto-flex",
+  display: "swap",
+});
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,6 +42,7 @@ export const spicyRice = Spicy_Rice({
 });
 
 export const fontVariables = [
+  robotoFlex.variable,
   montserrat.variable,
   nanumMyeongjo.variable,
   annie.variable,

@@ -80,7 +80,7 @@ const Header = () => {
               <li
                 className={`!w-[124px] cursor-pointer rounded-md p-[10px] text-center font-montserrat text-[16px] text-lg ${
                   activeLink === "Home"
-                    ? "bg-[#8A6C59] text-white"
+                    ? "bg-[#8A6C59] text-white font-bold"
                     : "text-[#6D4C41]"
                 }`}
               >
@@ -96,7 +96,7 @@ const Header = () => {
               <li
                 className={`!w-[124px] cursor-pointer rounded-md p-[10px] text-center font-montserrat text-[16px] text-lg ${
                   activeLink === "Work"
-                    ? "bg-[#8A6C59] text-white"
+                    ? "bg-[#8A6C59] text-white font-bold"
                     : "text-[#6D4C41]"
                 }`}
               >
@@ -112,7 +112,7 @@ const Header = () => {
               <li
                 className={`!w-[124px] cursor-pointer rounded-md p-[10px] text-center font-montserrat text-[16px] text-lg ${
                   activeLink === "Contact"
-                    ? "bg-[#8A6C59] text-white"
+                    ? "bg-[#8A6C59] text-white font-bold"
                     : "text-[#6D4C41]"
                 }`}
               >

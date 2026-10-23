@@ -14,6 +14,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
+        robotoFlex: ["var(--font-roboto-flex)", "sans-serif"],
         montserrat: ["var(--font-montserrat)", "sans-serif"],
         nanum: ["var(--font-nanum)", "serif"],
         annie: ["var(--font-annie)", "cursive"],

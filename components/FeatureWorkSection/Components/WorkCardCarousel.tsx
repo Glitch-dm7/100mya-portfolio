@@ -7,6 +7,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { workData } from "@/Data/workData";
 
 import WorkCard from "./WorkCard";
+import ScrollReveal from "@/components/Animations/ScrollReveal";
 
 const CARD_WIDTH = 480;
 // 4:3 image frame at CARD_WIDTH (see WorkCard)
@@ -191,7 +192,7 @@ const WorkCardCarousel = () => {
         {`Showing project ${activeIndex + 1} of ${total}: ${workData[activeIndex].title}`}
       </p>
 
-      <div className="hidden min-w-0 md:block">
+      <ScrollReveal containerClassName="hidden min-w-0 md:block" baseOffset={24}>
         <div className="flex w-full min-w-0 max-w-full items-start justify-between gap-4 lg:gap-10 xl:gap-14">
           <button
             type="button"
@@ -261,17 +262,18 @@ const WorkCardCarousel = () => {
         </div>
 
         <CarouselDots activeIndex={activeIndex} onSelect={goTo} />
-      </div>
+      </ScrollReveal>
 
       <div className="flex flex-col items-center gap-12 px-3 md:hidden">
         {workData.map((card, index) => (
+          <ScrollReveal key={`${card.title}-${index}`} containerClassName="w-full">
           <WorkCard
-            key={`${card.title}-${index}`}
             image={card.image}
             title={card.title}
             link={card.link}
             isActive
           />
+          </ScrollReveal>
         ))}
       </div>
     </div>

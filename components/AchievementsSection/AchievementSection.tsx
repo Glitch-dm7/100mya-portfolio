@@ -5,7 +5,7 @@ import InfiniteGalleryScrolling from './components/InfiniteGalleryScrolling';
 
 const AchievementSection = () => {
   return (
-    <div className="bg-[#FFFCF2] py-16">
+    <section id="achievements" className="bg-[#FFFCF2] py-16">
       <div className="overflow-x-hidden">
         {/* Top Heading */}
         <TopHeading
@@ -19,9 +19,8 @@ const AchievementSection = () => {
         />
 
       </div>
-    </div>
+    </section>
   );
 };
 
 export default AchievementSection;
-

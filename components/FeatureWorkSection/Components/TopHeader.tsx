@@ -1,5 +1,4 @@
-import BlurText from "@/components/Animations/BlurText";
-import SplitText from "@/components/Animations/SplitText";
+import ScrollReveal from "@/components/Animations/ScrollReveal";
 import Image from "next/image";
 
 interface TopHeadingProps {
@@ -11,7 +10,7 @@ const TopHeading = ({ title, subTitle }: TopHeadingProps) => {
   return (
     <div className="relative mb-10 text-center md:mb-16">
       <h2 className="relative inline-block font-nanum text-[40px] font-[800] text-[#3C3C3C] md:text-[80px]">
-        <BlurText text={title} delay={150} animateBy="words" direction="top" />
+        <ScrollReveal as="span">{title}</ScrollReveal>
         <Image
           src="/images/decoresImg/three_line.png"
           alt=""
@@ -40,14 +39,7 @@ const TopHeading = ({ title, subTitle }: TopHeadingProps) => {
             draggable={false}
           />
         </div>
-        <SplitText
-          text={subTitle}
-          delay={100}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          threshold={0.2}
-          rootMargin="-50px"
-        />
+        <ScrollReveal>{subTitle}</ScrollReveal>
       </div>
     </div>
   );

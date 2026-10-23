@@ -1,0 +1,14 @@
+.variable-proximity {
+  font-family: var(--font-roboto-flex), sans-serif;
+  font-optical-sizing: none;
+}
+
+.variable-proximity__word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.variable-proximity__letter {
+  display: inline-block;
+  transform-origin: 50% 80%;
+}
