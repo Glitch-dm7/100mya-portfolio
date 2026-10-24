@@ -30,13 +30,13 @@ const ContactSection = () => {
       id="contact"
       className="w-full max-w-full overflow-x-clip rounded-t-[50px] bg-[#8A6C59] bg-[linear-gradient(to_right,rgba(253,248,231,0.2)_1px,transparent_1px)] bg-[size:12rem] bg-center text-white md:bg-[size:200px]"
     >
-      <div className="mx-auto max-w-[1512px]">
-        <div className="overflow-hidden px-6 pt-12 md:px-0 md:pt-20">
+        <div className="mx-auto max-w-[1800px] overflow-hidden px-6 pt-12 [container-type:inline-size] md:px-8 md:pt-20">
           <ScrollReveal>
             <ContactHeading />
           </ScrollReveal>
         </div>
 
+      <div className="mx-auto max-w-[1512px]">
         <div className="flex flex-col items-center gap-10 px-6 pb-16 pt-10 text-center md:flex-row md:items-start md:justify-between md:gap-8 md:px-16 md:pb-20 md:pt-[72px] md:text-left lg:px-[80px] xl:px-[147px]">
           <div className="relative mx-auto w-full max-w-[340px] font-annie text-[16px] leading-[1.43] tracking-[0.04em] md:mx-0 md:max-w-[371px] md:text-[30px] md:leading-[43px]">
             <ScrollReveal>

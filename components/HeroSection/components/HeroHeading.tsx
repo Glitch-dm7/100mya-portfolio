@@ -1,35 +1,20 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import VariableProximity from "../../Animations/VariableProximity";
 import IdeaEclipse from "./IdeaEclipse";
 
 export default function HeroHeading() {
-  const containerRef = useRef<HTMLHeadingElement>(null);
-  const proximityProps = {
-    containerRef,
-    fromFontVariationSettings: "'wght' 550, 'opsz' 40",
-    toFontVariationSettings: "'wght' 950, 'opsz' 80",
-    radius: 140,
-    falloff: "gaussian" as const,
-    smoothing: 0.2,
-  };
-
   return (
     <h1
-      ref={containerRef}
-      className="relative text-center font-robotoFlex text-[42px] leading-[53px] text-[#313131] md:text-[90px] md:leading-[112px]"
+      className="relative text-center font-nanum text-[42px] font-extrabold leading-[53px] text-[#313131] md:text-[clamp(3rem,7.2vw,9rem)] md:font-bold md:leading-[1.14]"
     >
-      <VariableProximity {...proximityProps} label="Shaping" />{" "}
+      Shaping{" "}
       <span className="relative inline-block italic">
-        <VariableProximity {...proximityProps} label="ideas" />
+        ideas
         <IdeaEclipse />
       </span>{" "}
-      <VariableProximity {...proximityProps} label="into" />
+      into
       <br className="hidden md:block" />{" "}
       <span className="relative inline-block">
-        <VariableProximity {...proximityProps} label="intuitive experiences with" />
+        intuitive experiences with
         <Image
           src="/images/decoresImg/curve_arrow.png"
           alt=""

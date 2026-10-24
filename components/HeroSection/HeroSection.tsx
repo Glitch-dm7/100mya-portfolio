@@ -43,7 +43,7 @@ const HeroSection = () => {
 
         <div className="relative z-10 w-full px-2 text-center md:px-4">
           {/* Title block — Figma mobile: 291px centered */}
-          <div className="relative mx-auto w-[min(291px,100%)] md:w-auto">
+          <div className="relative mx-auto w-[min(291px,100%)] md:w-full md:max-w-[1800px]">
             <Image
               src="/images/decoresImg/shining_star.png"
               alt=""
@@ -53,13 +53,11 @@ const HeroSection = () => {
               draggable={false}
             />
 
-            <ScrollReveal duration={1}>
-              <HeroHeading />
-            </ScrollReveal>
+            <HeroHeading />
           </div>
 
           {/* Subtitle block — Figma mobile: 222px centered, 41px below title */}
-          <div className="relative mx-auto mt-[41px] w-fit max-w-full md:mt-[66px] md:w-auto">
+          <div className="relative mx-auto mt-[41px] w-fit max-w-full md:mt-[clamp(1.5rem,3vw,3.5rem)] md:w-auto">
             <ScrollReveal>
             <h6 className="whitespace-nowrap text-center font-annie text-[40px] font-normal leading-[57px] text-[#7A5944] md:text-[70px] md:leading-[100px]">
               <TypeWriter data={typoData} />

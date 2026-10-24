@@ -4,7 +4,7 @@ import Header from "@/components/Layout/Header";
 import { fontVariables } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Somya ",
+  title: "Portfolio | Saumya ",
   description: "Shaping ideas into intuitive experiences with",
 };
 

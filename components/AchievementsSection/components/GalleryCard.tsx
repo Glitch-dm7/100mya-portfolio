@@ -18,7 +18,7 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ image, caption, index }) => {
         className="h-[248px] w-[276px] object-cover object-top md:h-[348px] md:w-[376px]"
       />
       {/* Caption */}
-      <div className="mt-4 text-center font-annie text-[20px] md:text-[30px]  italic text-[#656565]">
+      <div className="mt-4 text-center font-annie text-[20px] md:text-[30px]  italic text-[#444444]">
         {caption}
       </div>
     </div>

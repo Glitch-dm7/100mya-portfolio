@@ -9,7 +9,7 @@ export default function ContactHeading() {
   return (
     <h2
       ref={containerRef}
-      className="whitespace-nowrap text-center font-montserrat text-[clamp(1.625rem,9vw,2.75rem)] font-semibold leading-[1.22] !text-white md:text-[clamp(3rem,11vw,11.25rem)]"
+      className="whitespace-nowrap text-center font-montserrat text-[clamp(1.625rem,9vw,2.75rem)] font-semibold leading-[1.22] !text-white md:text-[clamp(3rem,12cqw,13.5rem)] md:leading-[1.12]"
     >
       <VariableProximity
         label="LET'S CONNECT"
